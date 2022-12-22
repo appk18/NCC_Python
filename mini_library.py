@@ -23,8 +23,9 @@ class LMS:
                                              "Issue_date":"",
                                              "Status":"Available"}})
             id += 1
+        
 
-        print(self.books_dict)
+        # print(self.books_dict)
 
     def display_books(self):
         print("_____________________________________List Of Books_____________________________________________")
@@ -63,10 +64,27 @@ class LMS:
 if __name__ == "__main__":
     try:
         myLMS = LMS("list_of_books.txt","Python's Library")
-        myLMS.display_books()
-        myLMS.Issue_books()
-        myLMS.display_books()
-        myLMS.return_books()
-        myLMS.display_books()
+        role = input("Who are you?\n1. Libarian\n2. Borrower\nPlease choose(1/2) : ")
+        if role == '1':
+            activity = input("You are libarian\n1.Add new Book\n2.Check Books\nPlease choose(1/2) : ")
+            if activity == '1':
+                pass
+            elif activity == '2':
+                myLMS.display_books()
+        if role == '2':
+            activity = input("You are Borrower\n1.Borrow Book\nPlease choose(1/2) : ")
+            if activity == '1':
+                myLMS.display_books()
+                myLMS.Issue_books()
+                myLMS.display_books()
+                myLMS.return_books()
+                myLMS.display_books()
+
+        # myLMS = LMS("list_of_books.txt","Python's Library")
+        # myLMS.display_books()
+        # myLMS.Issue_books()
+        # myLMS.display_books()
+        # myLMS.return_books()
+        # myLMS.display_books()
     except Exception as e:
         print("Something wrong!Please Check your input!")
