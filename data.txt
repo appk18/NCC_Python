@@ -1,0 +1,54 @@
+Name - Aye
+age - 28
+School - UOW
+Education - Bachelor in Information Techonology 
+Job - Software Engineer
+sport - badminton
+Nationality - Myanmar
+Current_City - Singapore
+
+Name - Pyae
+age - 28
+School - UOW
+Education - Bachelor in Information Techonology 
+Job - Software Engineer
+sport - badminton
+Nationality - Myanmar
+Current_City - Singapore
+
+Name - Phyo
+age - 28
+School - UOW
+Education - Bachelor in Information Techonology 
+Job - Software Engineer
+sport - badminton
+Nationality - Myanmar
+Current_City - Singapore
+
+Name - Kyaw
+age - 28
+School - UOW
+Education - Bachelor in Information Techonology 
+Job - Software Engineer
+sport - badminton
+Nationality - Myanmar
+Current_City - Singapore
+
+Name - Aung
+age - 28
+School - UOW
+Education - Bachelor in Information Techonology 
+Job - Software Engineer
+sport - badminton
+Nationality - Myanmar
+Current_City - Singapore
+
+Name - MgMg
+age - 28
+School - UOW
+Education - Bachelor in Information Techonology 
+Job - Software Engineer
+sport - badminton
+Nationality - Myanmar
+Current_City - Singapore
+
