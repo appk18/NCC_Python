@@ -23,8 +23,6 @@ class LMS:
                                              "Issue_date":"",
                                              "Status":"Available"}})
             id += 1
-        
-
         # print(self.books_dict)
 
     def display_books(self):
@@ -35,7 +33,7 @@ class LMS:
             print(key,"\t\t",value.get("books_title"),"\t\t","-[",value.get("Status"),"]","\t\t","-[",value.get("lender_name"),"]","\t\t","-[",value.get("Issue_date"),"]")
 
     def Issue_books(self):
-        books_id = input("Enter books Id: ")
+        books_id = input("Enter books Id that you want to borrow : ")
         current_date = datetime.datetime.now().strftime("%Y-%m_%d %H:%M:%S")
         if books_id in self.books_dict.keys():
             if self.books_dict[books_id]["Status"] == "Available":
@@ -61,6 +59,16 @@ class LMS:
             self.books_dict[books_id]["lender_name"] = ""
             self.books_dict[books_id]["Issue_date"] = ""
 
+    def add_new_book(self):
+        print("This is to add the new book")
+        new_book = input("Enter name of the new book : ")
+        with open('list_of_books.txt', "a+") as file_object:
+            file_object.seek(0)
+            data = file_object.read(100)
+            if len(data) > 0:
+                file_object.write("\n")
+            file_object.write(new_book)
+
 if __name__ == "__main__":
     try:
         myLMS = LMS("list_of_books.txt","Python's Library")
@@ -68,7 +76,8 @@ if __name__ == "__main__":
         if role == '1':
             activity = input("You are libarian\n1.Add new Book\n2.Check Books\nPlease choose(1/2) : ")
             if activity == '1':
-                pass
+                myLMS.add_new_book()
+                myLMS.display_books()
             elif activity == '2':
                 myLMS.display_books()
         if role == '2':
@@ -79,6 +88,7 @@ if __name__ == "__main__":
                 myLMS.display_books()
                 myLMS.return_books()
                 myLMS.display_books()
+                
 
         # myLMS = LMS("list_of_books.txt","Python's Library")
         # myLMS.display_books()
