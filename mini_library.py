@@ -68,6 +68,7 @@ class LMS:
             if len(data) > 0:
                 file_object.write("\n")
             file_object.write(new_book)
+            self.display_books()
 
 if __name__ == "__main__":
     try:
@@ -77,7 +78,7 @@ if __name__ == "__main__":
             activity = input("You are libarian\n1.Add new Book\n2.Check Books\nPlease choose(1/2) : ")
             if activity == '1':
                 myLMS.add_new_book()
-                myLMS.display_books()
+                # myLMS.display_books()
             elif activity == '2':
                 myLMS.display_books()
         if role == '2':
@@ -88,13 +89,6 @@ if __name__ == "__main__":
                 myLMS.display_books()
                 myLMS.return_books()
                 myLMS.display_books()
-                
 
-        # myLMS = LMS("list_of_books.txt","Python's Library")
-        # myLMS.display_books()
-        # myLMS.Issue_books()
-        # myLMS.display_books()
-        # myLMS.return_books()
-        # myLMS.display_books()
     except Exception as e:
         print("Something wrong!Please Check your input!")
