@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CalssLibrary1
+{
+    class Test
+    {
+        public int add(int num1, int num2)
+        {
+            int res = num1 + num2;
+            return res;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Test tt = new Test();
+            Console.WriteLine(tt.add(2, 3));
+            Console.ReadKey();
+
+        }
+    }
+}
